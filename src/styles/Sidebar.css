@@ -1,0 +1,20 @@
+.sidebar {
+  width: 350px;
+}
+
+.sidebar__menu-element {
+  border-bottom: 1px solid var(--clr-bg-silver);
+
+  display: flex;
+  align-items: center;
+
+  padding: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.sidebar__menu-element__icon {
+  margin-left: auto;
+}
