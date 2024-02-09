@@ -1,7 +1,13 @@
-import './App.css';
+import '../styles/App.css';
+
+import PageHeader from './PageHeader';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <PageHeader />
+    </>
+  );
 }
 
 export default App;
