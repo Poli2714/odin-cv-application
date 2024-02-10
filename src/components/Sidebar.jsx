@@ -1,32 +1,15 @@
 import '../styles/Sidebar.css';
+import ExpandIcon from '../assets/expand.svg';
+import CollapseIcon from '../assets/collapse.svg';
 
-import AddIcon from '../assets/add.svg';
+import { sidebarMenuData } from '../data/sidebarMenuData';
 
-const menu = [
-  {
-    id: '01',
-    label: 'Personal Information',
-  },
-  {
-    id: '02',
-    label: 'Professional Summary',
-  },
-  {
-    id: '03',
-    label: 'Experience',
-  },
-  {
-    id: '04',
-    label: 'Education',
-  },
-];
-
-function SidebarMenuElement({ label, icon, alt }) {
+function SidebarMenuElement({ label, isActive, alt }) {
   return (
     <div className="sidebar__menu-element">
       {label}
       <img
-        src={icon}
+        src={isActive ? CollapseIcon : ExpandIcon}
         alt={alt}
         height={20}
         width={20}
@@ -36,26 +19,20 @@ function SidebarMenuElement({ label, icon, alt }) {
   );
 }
 
-function SidebarMenu() {
+export default function Sidebar({ onExpandOrCollapse, activeIndex }) {
   return (
-    <ul>
-      {menu.map(item => (
-        <li key={item.id}>
-          <SidebarMenuElement
-            label={item.label}
-            icon={AddIcon}
-            alt="Add icon"
-          />
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-export default function Sidebar() {
-  return (
-    <aside className="sidebar">
-      <SidebarMenu />
-    </aside>
+    <div className="sidebar">
+      <ul>
+        {sidebarMenuData.map((item, i) => (
+          <li key={item.id} onClick={() => onExpandOrCollapse(i)}>
+            <SidebarMenuElement
+              label={item.label}
+              isActive={activeIndex === i}
+              alt={activeIndex === i ? 'Minus sign' : 'Plus sign'}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

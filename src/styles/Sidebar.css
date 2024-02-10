@@ -1,4 +1,5 @@
 .sidebar {
+  border-right: 1px solid var(--clr-bg-silver);
   width: 350px;
 }
 
