@@ -1,38 +1,112 @@
 import AddMoreBtn from './AddMoreBtn';
 import InputElem from './InputElem';
-import Textarea from './TextArea';
 
-export default function EcucationForm() {
+export function DegreeInput({ degree, onChangeDegree }) {
+  return (
+    <InputElem label="Degree" labelFor="degree">
+      <input
+        type="text"
+        name="degree"
+        id="degree"
+        placeholder="e.g. M.Sc. in Computer Science"
+        value={degree}
+        onChange={onChangeDegree}
+        className="input-wrapper__input"
+      />
+    </InputElem>
+  );
+}
+
+export function UniversityInput({ university, onChangeUniversity }) {
+  return (
+    <InputElem label="University" labelFor="university">
+      <input
+        type="text"
+        name="university"
+        id="university"
+        placeholder="e.g. Oxford University"
+        value={university}
+        onChange={onChangeUniversity}
+        className="input-wrapper__input"
+      />
+    </InputElem>
+  );
+}
+
+export function EduStartDate({ eduStartDate, onChangeEduStartDate }) {
+  return (
+    <InputElem label="Start" labelFor="eduStartDate">
+      <input
+        type="text"
+        name="eduStartDate"
+        id="eduStartDate"
+        placeholder="MM / YYYY"
+        value={eduStartDate}
+        onChange={onChangeEduStartDate}
+        className="input-wrapper__input"
+      />
+    </InputElem>
+  );
+}
+
+export function EduEndDate({ eduEndDate, onChangeEduEndDate }) {
+  return (
+    <InputElem label="End" labelFor="EduEndDate">
+      <input
+        type="text"
+        name="eduEndDate"
+        id="eduEndDate"
+        placeholder="MM / YYYY"
+        value={eduEndDate}
+        onChange={onChangeEduEndDate}
+        className="input-wrapper__input"
+      />
+    </InputElem>
+  );
+}
+
+export function EduInfo({ eduInfo, onChangeEduInfo }) {
+  return (
+    <InputElem label="Additional Information" labelFor="eduInfo">
+      <textarea
+        name="eduInfo"
+        id="eduInfo"
+        rows={5}
+        value={eduInfo}
+        onChange={onChangeEduInfo}
+        className="input-wrapper__input"
+      ></textarea>
+    </InputElem>
+  );
+}
+
+export default function EcucationForm({ education, onChange }) {
+  const { degree, university, eduStartDate, eduEndDate, eduInfo } = education;
+  const {
+    handleChangeDegree,
+    handleChangeUniversity,
+    handleChangeEduStartDate,
+    handleChangeEduEndDate,
+    handleChangeEduInfo,
+  } = onChange;
+
   return (
     <>
       <form action="" method="get" className="cv-edit-panel__form">
-        <InputElem
-          label="Degree"
-          labelFor="degree"
-          type="text"
-          placeholder="e.g. M.Sc. in Computer Science"
+        <DegreeInput degree={degree} onChangeDegree={handleChangeDegree} />
+        <UniversityInput
+          university={university}
+          onChangeUniversity={handleChangeUniversity}
         />
-        <InputElem
-          label="University"
-          labelFor="university"
-          type="text"
-          placeholder="e.g. Oxford University"
+        <EduStartDate
+          eduStartDate={eduStartDate}
+          onChangeEduStartDate={handleChangeEduStartDate}
         />
-        <div className="dates">
-          <InputElem
-            label="Start"
-            labelFor="startDate"
-            type="text"
-            placeholder="MM / YYYY"
-          />
-          <InputElem
-            label="End"
-            labelFor="endDate"
-            type="text"
-            placeholder="MM / YYYY"
-          />
-        </div>
-        <Textarea label="Additional Information" labelFor="info" rows={5} />
+        <EduEndDate
+          eduEndDate={eduEndDate}
+          onChangeEduEndDate={handleChangeEduEndDate}
+        />
+        <EduInfo eduInfo={eduInfo} onChangeEduInfo={handleChangeEduInfo} />
       </form>
       <AddMoreBtn />
     </>

@@ -1,13 +1,13 @@
 import '../styles/App.css';
 
 import PageHeader from './PageHeader';
-import Sidebar from './Sidebar';
+import MainSection from './MainSection';
 
 function App() {
   return (
     <>
       <PageHeader />
-      <Sidebar />
+      <MainSection />
     </>
   );
 }

@@ -8,7 +8,9 @@
   --clr-bg-silver: hsl(0, 0%, 90%);
   --clr-bg-white: hsl(60, 100%, 99%);
   --clr-primary: hsl(4, 82%, 67%);
+  --clr-silver-opaque: hsl(0, 0%, 90%, 0.5);
   --clr-text: hsl(0, 0%, 20%);
+  --clr-text-opaque: hsl(0, 0%, 20%, 0.5);
 
   font-family:
     system-ui,
@@ -58,4 +60,12 @@ button:focus-visible {
 
 li {
   list-style-type: none;
+}
+
+input,
+textarea {
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
