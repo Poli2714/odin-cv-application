@@ -1,0 +1,29 @@
+.cv-section__part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cv-section-part__header {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'title date'
+    'subtitle date';
+  row-gap: 0.25rem;
+}
+
+.cv-section-part-header__title {
+  grid-area: title;
+}
+
+.cv-section-part-header__subtitle {
+  font-style: italic;
+  grid-area: subtitle;
+}
+
+.cv-section-part-header__date {
+  font-style: italic;
+  grid-area: date;
+}

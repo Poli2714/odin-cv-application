@@ -1,0 +1,32 @@
+.cv-wrapper {
+  background-color: var(--clr-bg-silver);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 3rem;
+}
+
+.cv {
+  background-color: var(--clr-bg-white);
+  height: 53rem;
+  padding: 2rem 3rem;
+  width: 40.625rem;
+}
+
+.cv__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding-bottom: 1.25rem;
+}
+
+.cv__summary__text {
+  line-height: 1.25;
+}
+
+.cv-section-part-body__text {
+  line-height: 1.33;
+}
