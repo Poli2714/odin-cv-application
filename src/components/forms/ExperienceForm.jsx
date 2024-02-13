@@ -1,4 +1,5 @@
 import AddMoreBtn from './AddMoreBtn';
+import CharacterLimit from './CharacterLimit';
 import InputElem from './InputElem';
 
 export function JobTitleInput({ jobTitle, onChangeJobTitle }) {
@@ -71,15 +72,18 @@ export function JobDescriptionInput({
 }) {
   return (
     <InputElem label="Job description" labelFor="jobDescription">
-      <textarea
-        name="jobDescription"
-        id="jobDescription"
-        placeholder="Write your job description"
-        rows={10}
-        value={jobDescription}
-        onChange={onChangeJobDescription}
-        className="input-wrapper__input"
-      ></textarea>
+      <CharacterLimit text={jobDescription} limit={200}>
+        <textarea
+          name="jobDescription"
+          id="jobDescription"
+          placeholder="Write your job description"
+          rows={10}
+          maxLength={200}
+          value={jobDescription}
+          onChange={onChangeJobDescription}
+          className="input-wrapper__input"
+        ></textarea>
+      </CharacterLimit>
     </InputElem>
   );
 }

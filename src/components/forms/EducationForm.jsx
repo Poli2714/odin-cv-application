@@ -1,4 +1,5 @@
 import AddMoreBtn from './AddMoreBtn';
+import CharacterLimit from './CharacterLimit';
 import InputElem from './InputElem';
 
 export function DegreeInput({ degree, onChangeDegree }) {
@@ -68,14 +69,17 @@ export function EduEndDate({ eduEndDate, onChangeEduEndDate }) {
 export function EduInfo({ eduInfo, onChangeEduInfo }) {
   return (
     <InputElem label="Additional Information" labelFor="eduInfo">
-      <textarea
-        name="eduInfo"
-        id="eduInfo"
-        rows={5}
-        value={eduInfo}
-        onChange={onChangeEduInfo}
-        className="input-wrapper__input"
-      ></textarea>
+      <CharacterLimit text={eduInfo} limit={100}>
+        <textarea
+          name="eduInfo"
+          id="eduInfo"
+          rows={5}
+          maxLength={100}
+          value={eduInfo}
+          onChange={onChangeEduInfo}
+          className="input-wrapper__input"
+        ></textarea>
+      </CharacterLimit>
     </InputElem>
   );
 }
