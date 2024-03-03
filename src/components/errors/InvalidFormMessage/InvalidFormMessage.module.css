@@ -1,0 +1,16 @@
+.invalidFormMessage {
+  animation: appear 250ms ease-out 1 forwards alternate;
+  color: var(--clr-primary);
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
