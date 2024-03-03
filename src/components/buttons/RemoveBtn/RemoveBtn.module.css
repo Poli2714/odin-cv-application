@@ -1,0 +1,16 @@
+.removeBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-weight: 600;
+
+  &:disabled {
+    cursor: default;
+    color: hsl(240, 3%, 71%, 0.65);
+
+    & svg path {
+      fill: hsl(240, 3%, 71%, 0.65);
+    }
+  }
+}
