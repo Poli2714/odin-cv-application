@@ -1,0 +1,23 @@
+.editPanel {
+  animation: move 400ms ease-in-out 1 alternate forwards;
+  border-right: solid 1px var(--clr-bg-silver);
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+  width: var(--sidebar-menu-width);
+  transform: translateX(100%);
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
