@@ -1,0 +1,16 @@
+.cvSection {
+  border-top: solid 1px var(--clr-bg-silver);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+
+  padding: 1.25rem 0;
+}
+
+.sectionTitle {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  letter-spacing: 0.3ch;
+  text-transform: uppercase;
+}
