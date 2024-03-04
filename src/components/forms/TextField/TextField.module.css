@@ -1,0 +1,38 @@
+.textField {
+  background-color: var(--clr-silver-opaque);
+  border: 0;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  width: 100%;
+
+  &::placeholder {
+    color: var(--clr-text-opaque);
+  }
+
+  &:disabled {
+    background-color: var(--clr-disabled-input);
+  }
+
+  &:focus {
+    border-bottom: solid var(--clr-default-input) 3px;
+    outline: 0;
+  }
+
+  &:not(:focus):where(:placeholder-shown) {
+    border-bottom: 0;
+  }
+
+  &:not(:focus, :placeholder-shown) {
+    &:valid {
+      border-bottom: solid var(--clr-valid-input) 3px;
+    }
+
+    &:invalid {
+      border-bottom: solid var(--clr-invalid-input) 3px;
+    }
+  }
+}
+
+.textarea {
+  resize: none;
+}
