@@ -1,0 +1,17 @@
+.cvWrapper {
+  background-color: var(--clr-bg-silver);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 1rem 3rem;
+}
+
+.cv {
+  background-color: var(--clr-bg-white);
+  height: 100%;
+  padding: 2rem 3rem;
+  width: 40.625rem;
+}
