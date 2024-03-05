@@ -1,0 +1,26 @@
+.group {
+  border-bottom: 1px solid var(--clr-text-opaque);
+
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 0;
+  width: 100%;
+
+  & > img {
+    margin-left: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.collapsed {
+  transition: transform 150ms linear;
+}
+
+.expanded {
+  transform: rotate(180deg);
+  transition: transform 300ms linear;
+}
