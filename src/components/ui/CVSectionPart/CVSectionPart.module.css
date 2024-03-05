@@ -1,0 +1,29 @@
+.sectionPart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.partHeader {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'title date'
+    'subtitle date';
+  row-gap: 0.25rem;
+}
+
+.partTitle {
+  grid-area: title;
+}
+
+.partSubtitle {
+  font-style: italic;
+  grid-area: subtitle;
+}
+
+.partDate {
+  font-style: italic;
+  grid-area: date;
+}
