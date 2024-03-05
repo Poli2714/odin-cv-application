@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders Group 1`] = `
+<div
+  class="_group_15dcab"
+  data-testid="group"
+>
+  <span>
+    Test label
+  </span>
+  <img
+    alt="Arrow down icon"
+    class="_collapsed_15dcab"
+    height="20"
+    src="/src/assets/arrowDown.svg"
+    width="20"
+  />
+</div>
+`;
