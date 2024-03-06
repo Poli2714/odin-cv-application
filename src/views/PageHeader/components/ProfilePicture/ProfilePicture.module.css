@@ -1,0 +1,12 @@
+.navProfilePicture {
+  background-color: var(--clr-bg-silver);
+  border-radius: 50%;
+  height: 3.125em;
+  transition: transform 300ms ease-out;
+  width: 3.125em;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.075);
+  }
+}
