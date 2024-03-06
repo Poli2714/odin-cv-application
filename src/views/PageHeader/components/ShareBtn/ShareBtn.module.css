@@ -1,0 +1,9 @@
+.shareBtn {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg-white);
+  transition: background-color 300ms ease-out;
+
+  &:hover {
+    background-color: var(--clr-text);
+  }
+}
