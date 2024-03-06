@@ -1,0 +1,12 @@
+.downloadBtn {
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+
+  & img {
+    transition: transform 300ms ease-out;
+  }
+
+  &:hover img {
+    transform: translateY(0.25rem);
+  }
+}
