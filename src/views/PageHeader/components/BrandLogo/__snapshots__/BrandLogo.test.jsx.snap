@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders BrandLogo 1`] = `
+<div
+  class="_brand_536f07"
+  data-testid="brand-logo"
+>
+  <img
+    alt="MEK brand logo"
+    height="50"
+    src="/src/assets/brand-logo.svg"
+    width="50"
+  />
+  <h1
+    class="_brandLogo_536f07"
+  >
+    MEK
+  </h1>
+</div>
+`;
