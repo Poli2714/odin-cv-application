@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders CurrentJobTitle 1`] = `
+<div
+  data-testid="input-wrapper"
+>
+  <label
+    for="jobTitle"
+  >
+    Test label
+  </label>
+  <input
+    id="jobTitle"
+    name="jobTitle"
+    value=""
+  />
+</div>
+`;
