@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders Email 1`] = `
+<input
+  class="_emailInput_cbcb79"
+  id="email"
+  name="email"
+  placeholder="test@example.com"
+  type="email"
+  value=""
+/>
+`;
