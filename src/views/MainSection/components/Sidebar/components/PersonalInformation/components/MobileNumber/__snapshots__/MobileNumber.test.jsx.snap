@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders MobileNumber 1`] = `
+<div
+  data-testid="input-wrapper"
+>
+  <label
+    for="mobile"
+  >
+    Test label
+  </label>
+  <input
+    class="_telInput_1536b4"
+    id="mobile"
+    name="mobile"
+    placeholder="+12345678910"
+    type="tel"
+    value=""
+  />
+</div>
+`;
