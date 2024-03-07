@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders FullName component 1`] = `
+<div
+  data-testid="input-wrapper"
+>
+  <label
+    for="test"
+  >
+    Test label
+  </label>
+  <input
+    id="test"
+    name="test"
+    type="text"
+    value=""
+  />
+</div>
+`;
