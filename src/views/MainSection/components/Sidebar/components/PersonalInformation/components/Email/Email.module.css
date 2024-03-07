@@ -1,0 +1,3 @@
+.emailInput {
+  composes: textField from 'src/components/forms/TextField/TextField.module.css';
+}
