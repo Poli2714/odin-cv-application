@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders JobDescription 1`] = `
+<div
+  data-testid="input-wrapper"
+>
+  <label
+    for="jobDescription"
+  >
+    Mock label
+  </label>
+  <div>
+    <span
+      data-testid="limit"
+    >
+      0
+       / 200
+    </span>
+    <textarea
+      id="jobDescription"
+      maxlength="200"
+      rows="10"
+    />
+  </div>
+</div>
+`;
