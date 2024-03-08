@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders Summary 1`] = `
+<form
+  action=""
+  data-testid="form"
+  method="get"
+>
+  <div>
+    <label
+      for="summary"
+    >
+      Mock label
+    </label>
+    <div>
+      <span
+        data-testid="limit"
+      >
+        0
+         / 200
+      </span>
+      <textarea
+        id="summary"
+        maxlength="200"
+        rows="10"
+      />
+    </div>
+  </div>
+</form>
+`;
