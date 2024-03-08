@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders JobEndDate 1`] = `
+<div
+  data-testid="input-wrapper"
+>
+  <label
+    for="jobEndDate"
+  >
+    Mock label
+  </label>
+  <input
+    id="jobEndDate"
+    type="text"
+    value=""
+  />
+</div>
+`;
