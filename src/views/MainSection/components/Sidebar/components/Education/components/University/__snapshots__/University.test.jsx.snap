@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders University 1`] = `
+<div
+  data-testid="input-wrapper"
+>
+  <label
+    for="university"
+  >
+    Mock label
+  </label>
+  <input
+    id="university"
+    type="text"
+    value=""
+  />
+</div>
+`;
