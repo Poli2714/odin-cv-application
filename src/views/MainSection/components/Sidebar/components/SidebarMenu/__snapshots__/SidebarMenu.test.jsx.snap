@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders Sidebar menu with 4 menu items 1`] = `
+<div
+  class="_sidebarMenu_2b758e"
+  data-testid="sidebar-menu"
+>
+  <ul>
+    <li>
+      <div
+        class="_menuElement_c36675"
+        data-testid="menu-item"
+      >
+        Personal Information
+        <img
+          alt="Plus sign"
+          class="_icon_c36675"
+          height="20"
+          src="/src/assets/expand.svg"
+          width="20"
+        />
+      </div>
+    </li>
+    <li>
+      <div
+        class="_menuElement_c36675"
+        data-testid="menu-item"
+      >
+        Professional Summary
+        <img
+          alt="Plus sign"
+          class="_icon_c36675"
+          height="20"
+          src="/src/assets/expand.svg"
+          width="20"
+        />
+      </div>
+    </li>
+    <li>
+      <div
+        class="_menuElement_c36675"
+        data-testid="menu-item"
+      >
+        Experience
+        <img
+          alt="Plus sign"
+          class="_icon_c36675"
+          height="20"
+          src="/src/assets/expand.svg"
+          width="20"
+        />
+      </div>
+    </li>
+    <li>
+      <div
+        class="_menuElement_c36675"
+        data-testid="menu-item"
+      >
+        Education
+        <img
+          alt="Plus sign"
+          class="_icon_c36675"
+          height="20"
+          src="/src/assets/expand.svg"
+          width="20"
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+`;

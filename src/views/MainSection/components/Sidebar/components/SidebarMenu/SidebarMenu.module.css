@@ -1,0 +1,6 @@
+.sidebarMenu {
+  border-right: 1px solid var(--clr-bg-silver);
+  height: 100%;
+  position: absolute;
+  width: var(--sidebar-menu-width);
+}
