@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders ExpRemoveBtn 1`] = `
+<button
+  disabled=""
+>
+  Mock click
+</button>
+`;
