@@ -1,0 +1,27 @@
+.uploadPhoto {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.uploadPhotoLabel {
+  background-color: var(--clr-bg-silver);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 400;
+  height: 2.5rem;
+  width: 8rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fileInput {
+  display: none;
+}
