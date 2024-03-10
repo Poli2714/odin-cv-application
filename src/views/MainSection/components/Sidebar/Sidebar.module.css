@@ -1,0 +1,12 @@
+.sidebar {
+  display: flex;
+
+  position: relative;
+  transition: width 250ms ease;
+  width: var(--sidebar-menu-width);
+}
+
+.active {
+  transition: width 300ms ease;
+  width: calc(var(--sidebar-menu-width) * 2);
+}
