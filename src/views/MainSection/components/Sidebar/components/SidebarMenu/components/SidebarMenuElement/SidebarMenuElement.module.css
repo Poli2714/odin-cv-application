@@ -1,0 +1,16 @@
+.menuElement {
+  border-bottom: 1px solid var(--clr-bg-silver);
+
+  display: flex;
+  align-items: center;
+
+  padding: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.icon {
+  margin-left: auto;
+}
