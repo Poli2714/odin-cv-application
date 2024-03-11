@@ -1,7 +1,4 @@
-import '../styles/App.css';
-
-import PageHeader from './PageHeader';
-import MainSection from './MainSection';
+import { MainSection, PageHeader } from './views';
 
 function App() {
   return (

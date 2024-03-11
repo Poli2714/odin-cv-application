@@ -76,3 +76,10 @@ textarea {
   font-size: inherit;
   font-weight: inherit;
 }
+
+#root {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+
+  height: 100%;
+}

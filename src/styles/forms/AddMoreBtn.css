@@ -1,8 +1,0 @@
-.cv-edit-panel__add-more-btn {
-  color: var(--clr-primary);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  font-weight: 600;
-}
