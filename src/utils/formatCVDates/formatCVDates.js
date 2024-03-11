@@ -45,6 +45,8 @@ const formatCVDates = (startDate, endDate) => {
 
   if (formattedStartDate === formattedEndDate) return 'Less than a month';
   if (endDate.length === 0 && startDate.length < 9) return formattedStartDate;
+  if (startDate.length === 9 && !endDate.length)
+    return `${formattedStartDate} - current`;
   return `${formattedStartDate} - ${formattedEndDate}`;
 };
 

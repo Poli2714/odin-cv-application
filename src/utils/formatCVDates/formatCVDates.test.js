@@ -47,9 +47,9 @@ describe('formatCVDates', () => {
     expect(formatCVDates('01 / 2', '')).toEqual('January 2');
   });
 
-  it('returns formatted value of first date (completed) with dash character if the second date is not provided', () => {
-    expect(formatCVDates('04 / 1965', '')).toEqual('April 1965 - ');
-    expect(formatCVDates('07 / 2017', '')).toEqual('July 2017 - ');
+  it('returns formatted value of first date (completed) with " - current" if the second date is not provided', () => {
+    expect(formatCVDates('04 / 1965', '')).toEqual('April 1965 - current');
+    expect(formatCVDates('07 / 2017', '')).toEqual('July 2017 - current');
   });
 
   it('returns correct formatted value of provided dates', () => {
