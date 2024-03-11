@@ -29,6 +29,10 @@
 .contacts {
   display: flex;
   gap: 1rem;
+
+  & a {
+    text-decoration: none;
+  }
 }
 
 .contactWrapper {
@@ -36,9 +40,9 @@
   align-items: center;
   gap: 0.25rem;
 
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .summary {
-  line-height: 1.25;
+  line-height: 1.33;
 }
