@@ -11,6 +11,12 @@
   --clr-silver-opaque: hsl(0, 0%, 90%, 0.5);
   --clr-text: hsl(0, 0%, 20%);
   --clr-text-opaque: hsl(0, 0%, 20%, 0.5);
+  --clr-valid-input: hsl(136, 65%, 67%);
+  --clr-invalid-input: hsl(347, 83%, 60%);
+  --clr-default-input: hsl(0, 0%, 20%, 0.5);
+  --clr-disabled-input: hsl(240, 3%, 71%, 0.65);
+
+  --sidebar-menu-width: 350px;
 
   font-family:
     system-ui,
@@ -37,7 +43,7 @@ body {
   background-color: var(--clr-bg-white);
   color: var(--clr-text);
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 h1 {
@@ -49,6 +55,7 @@ button {
   appearance: none;
   background-color: inherit;
   border: 0;
+  color: inherit;
   font-size: 1rem;
   font-family: inherit;
   cursor: pointer;
