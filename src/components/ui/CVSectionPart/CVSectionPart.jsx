@@ -21,9 +21,9 @@ function CVSectionPart({ children, date, subtitle, title }) {
 
 CVSectionPart.propTypes = {
   children: PropTypes.node,
-  date: PropTypes.string,
-  subtitle: PropTypes.string,
-  title: PropTypes.string,
+  date: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 export default CVSectionPart;
