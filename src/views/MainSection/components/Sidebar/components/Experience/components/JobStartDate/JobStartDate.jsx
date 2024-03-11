@@ -8,19 +8,19 @@ import { ExperienceContext } from 'src/hooks/Contexts';
 
 function JobStartDate({ id }) {
   const { experiences, setExperiences } = useContext(ExperienceContext);
+  const { jobStartDate } = experiences[id];
+
   const currentYear = new Date().getFullYear();
   const pattern = `^(?:0[1-9]|1[0-2]) / (?:19[0-9]{2}|20(?:00|[0-${currentYear - 1900}][0-9]))$`;
 
-  const handleChangeJobStartDate = (e, key) => {
-    const formattedDate = formatDateInput(
-      e.target.value,
-      experiences[key].jobStartDate,
-    );
-    if (formattedDate === experiences[key].jobStartDate) return;
+  const handleChangeJobStartDate = e => {
+    const formattedDate = formatDateInput(e.target.value, jobStartDate);
+    if (formattedDate === jobStartDate) return;
+
     setExperiences({
       ...experiences,
-      [key]: {
-        ...experiences[key],
+      [id]: {
+        ...experiences[id],
         jobStartDate: formattedDate,
       },
     });
@@ -31,10 +31,10 @@ function JobStartDate({ id }) {
       <Label labelName="Start" labelFor="jobStartDate" />
       <TextInput
         name="jobStartDate"
-        onChange={e => handleChangeJobStartDate(e, id)}
+        onChange={handleChangeJobStartDate}
         pattern={pattern}
         placeholder="MM / YYYY"
-        value={experiences[id].jobStartDate}
+        value={jobStartDate}
       />
     </InputWrapper>
   );

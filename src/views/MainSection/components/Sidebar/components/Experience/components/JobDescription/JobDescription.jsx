@@ -11,24 +11,25 @@ const rows = 10;
 
 function JobDescription({ id }) {
   const { experiences, setExperiences } = useContext(ExperienceContext);
+  const { jobDescription } = experiences[id];
 
-  const handleChangeJobDescription = (e, key) =>
+  const handleChangeJobDescription = e =>
     setExperiences({
       ...experiences,
-      [key]: { ...experiences[key], jobDescription: e.target.value },
+      [id]: { ...experiences[id], jobDescription: e.target.value },
     });
 
   return (
     <InputWrapper>
       <Label labelName="Job Description" labelFor="jobDescription" />
-      <CharacterLimit limit={limit} value={experiences[id].jobDescription}>
+      <CharacterLimit limit={limit} value={jobDescription}>
         <TextArea
           name="jobDescription"
           placeholder="Write your job description"
           rows={rows}
           maxLength={limit}
-          value={experiences[id].jobDescription}
-          onChange={e => handleChangeJobDescription(e, id)}
+          value={jobDescription}
+          onChange={handleChangeJobDescription}
         />
       </CharacterLimit>
     </InputWrapper>

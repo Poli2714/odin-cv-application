@@ -2,6 +2,7 @@ import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import Employer from './Employer';
 import { ExperienceContext } from 'src/hooks/Contexts';
@@ -31,6 +32,10 @@ function MockParenComponent({ id }) {
     </ExperienceContext.Provider>
   );
 }
+
+MockParenComponent.propTypes = {
+  id: PropTypes.string,
+};
 
 test('renders Employer', () => {
   render(<MockParenComponent id="testId" />);

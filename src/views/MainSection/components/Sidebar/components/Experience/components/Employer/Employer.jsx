@@ -7,11 +7,12 @@ import { ExperienceContext } from 'src/hooks/Contexts';
 
 function Employer({ id }) {
   const { experiences, setExperiences } = useContext(ExperienceContext);
+  const { employer } = experiences[id];
 
-  const handleChangeEmployer = (e, key) =>
+  const handleChangeEmployer = e =>
     setExperiences({
       ...experiences,
-      [key]: { ...experiences[key], employer: e.target.value },
+      [id]: { ...experiences[id], employer: e.target.value },
     });
 
   return (
@@ -19,9 +20,9 @@ function Employer({ id }) {
       <Label labelName="Employer" labelFor="employer" />
       <TextInput
         name="employer"
-        onChange={e => handleChangeEmployer(e, id)}
+        onChange={handleChangeEmployer}
         placeholder="e.g. Facebook"
-        value={experiences[id].employer}
+        value={employer}
       />
     </InputWrapper>
   );

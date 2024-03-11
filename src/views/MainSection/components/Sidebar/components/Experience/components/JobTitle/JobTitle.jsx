@@ -7,11 +7,12 @@ import { ExperienceContext } from 'src/hooks/Contexts';
 
 function JobTitle({ id }) {
   const { experiences, setExperiences } = useContext(ExperienceContext);
+  const { jobTitle } = experiences[id];
 
-  const handleChangeJobTitle = (e, key) =>
+  const handleChangeJobTitle = e =>
     setExperiences({
       ...experiences,
-      [key]: { ...experiences[key], jobTitle: e.target.value },
+      [id]: { ...experiences[id], jobTitle: e.target.value },
     });
 
   return (
@@ -20,10 +21,10 @@ function JobTitle({ id }) {
       <TextInput
         autofocus={true}
         name="jobTitle"
-        onChange={e => handleChangeJobTitle(e, id)}
+        onChange={handleChangeJobTitle}
         pattern="^\w+"
         placeholder="e.g. React developer"
-        value={experiences[id].jobTitle}
+        value={jobTitle}
       />
     </InputWrapper>
   );

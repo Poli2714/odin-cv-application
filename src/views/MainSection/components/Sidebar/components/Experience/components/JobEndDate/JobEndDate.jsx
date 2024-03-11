@@ -29,11 +29,11 @@ function JobEndDate({ id }) {
     <InputWrapper>
       <Label labelName="End" labelFor="jobEndDate" />
       <TextInput
-        name="jobEndDate"
-        placeholder="MM / YYYY"
         disabled={jobStartDate.length < 9}
-        value={jobEndDate}
+        name="jobEndDate"
         onChange={handleChangeJobEndDate}
+        placeholder="MM / YYYY"
+        value={jobEndDate}
       />
     </InputWrapper>
   );
