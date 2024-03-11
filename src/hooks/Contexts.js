@@ -41,28 +41,28 @@ const SummaryContext = createContext({
 });
 
 const ExperienceContext = createContext({
-  experiences: [
-    {
+  experiences: {
+    id: {
       jobTitle: '',
       employer: '',
       jobStartDate: '',
       jobEndDate: '',
       jobDescription: '',
     },
-  ],
+  },
   setExperiences: () => {},
 });
 
 const EducationContext = createContext({
-  educations: [
-    {
+  educations: {
+    id: {
       degree: '',
       university: '',
       eduStartDate: '',
       eduEndDate: '',
       eduInfo: '',
     },
-  ],
+  },
   setEducations: () => {},
 });
 
