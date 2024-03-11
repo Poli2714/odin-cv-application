@@ -16,7 +16,7 @@ function Photo({ size, src }) {
   );
 }
 
-Photo.proptypes = {
+Photo.propTypes = {
   size: PropTypes.number,
   src: PropTypes.string,
 };
