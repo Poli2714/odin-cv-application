@@ -15,13 +15,7 @@ vi.mock('src/components/layout', () => ({
 vi.mock('src/components/forms', () => ({
   Label: vi.fn(() => <label htmlFor="test">Test label</label>),
   TextInput: vi.fn(({ value, onChange }) => (
-    <input
-      name="test"
-      id="test"
-      type="text"
-      value={value}
-      onChange={onChange}
-    />
+    <input id="test" onChange={onChange} type="text" value={value} />
   )),
 }));
 
@@ -39,6 +33,7 @@ test('renders FullName component', () => {
   render(<FullName />);
 
   expect(screen.getByTestId('input-wrapper')).toMatchSnapshot();
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 });
 
 test('updates fullName value as a user types', async () => {
@@ -47,8 +42,14 @@ test('updates fullName value as a user types', async () => {
   render(<MockParentComponent />);
   const input = screen.getByLabelText('Test label');
   expect(input).toHaveValue('');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 
+  await user.type(input, 'E');
+  expect(input).toHaveValue('E');
+  expect(screen.queryByTestId('warning')).toBeInTheDocument();
+
+  await user.clear(input);
   await user.type(input, 'Elgun');
-
   expect(input).toHaveValue('Elgun');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 });
