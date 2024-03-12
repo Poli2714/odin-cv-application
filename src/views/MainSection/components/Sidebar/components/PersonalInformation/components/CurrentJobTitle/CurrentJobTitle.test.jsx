@@ -33,6 +33,7 @@ test('renders CurrentJobTitle', () => {
   render(<CurrentJobTitle />);
 
   expect(screen.getByTestId('input-wrapper')).toMatchSnapshot();
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 });
 
 test('updates currentJobTitle value as a user types', async () => {
@@ -40,10 +41,18 @@ test('updates currentJobTitle value as a user types', async () => {
 
   render(<MockParentComponent />);
   const input = screen.getByLabelText('Test label');
-
   expect(input).toHaveValue('');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
+
+  await user.type(input, 'a');
+  expect(input).toHaveValue('a');
+  expect(screen.queryByTestId('warning')).toBeInTheDocument();
+
+  await user.clear(input);
   await user.type(input, 'Web developer');
   expect(input).toHaveValue('Web developer');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
+
   await user.clear(input);
   await user.type(input, 'hello');
   expect(input).toHaveValue('hello');

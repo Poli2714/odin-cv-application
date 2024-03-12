@@ -1,0 +1,13 @@
+.jobTitle:not(:focus, :placeholder-shown) + .invalid {
+  position: relative;
+
+  &::after {
+    color: var(--clr-warning);
+    content: '⚠️ Not a valid job title';
+    font-size: 0.85rem;
+
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+  }
+}
