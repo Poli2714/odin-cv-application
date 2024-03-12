@@ -2,11 +2,8 @@
 
 exports[`renders Email 1`] = `
 <input
-  class="_emailInput_cbcb79"
   id="email"
-  name="email"
-  placeholder="test@example.com"
-  type="email"
+  type="text"
   value=""
 />
 `;

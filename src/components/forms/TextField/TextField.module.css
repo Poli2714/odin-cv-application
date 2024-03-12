@@ -23,12 +23,8 @@
   }
 
   &:not(:focus, :placeholder-shown) {
-    &:valid {
-      border-bottom: solid var(--clr-valid-input) 3px;
-    }
-
     &:invalid {
-      border-bottom: solid var(--clr-invalid-input) 3px;
+      border-bottom: solid var(--clr-warning) 3px;
     }
   }
 }

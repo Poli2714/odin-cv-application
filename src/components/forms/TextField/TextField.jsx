@@ -38,6 +38,7 @@ TextArea.propTypes = {
 
 function TextInput({
   autofocus = false,
+  clName = '',
   disabled = false,
   name,
   onChange,
@@ -48,7 +49,7 @@ function TextInput({
   return (
     <input
       autoFocus={autofocus}
-      className={styles.textField}
+      className={`${styles.textField}${clName && ' ' + clName}`}
       disabled={disabled}
       id={name}
       name={name}
@@ -63,6 +64,7 @@ function TextInput({
 
 TextInput.propTypes = {
   autofocus: PropTypes.bool,
+  clName: PropTypes.string,
   disabled: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
