@@ -1,0 +1,13 @@
+.location:not(:focus, :placeholder-shown) + .invalid {
+  position: relative;
+
+  &::after {
+    color: var(--clr-warning);
+    content: '⚠️ Not a valid city';
+    font-size: 0.85rem;
+
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+  }
+}

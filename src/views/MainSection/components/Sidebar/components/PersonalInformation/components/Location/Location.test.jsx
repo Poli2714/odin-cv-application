@@ -33,6 +33,7 @@ test('renders Location', () => {
   render(<Location />);
 
   expect(screen.getByTestId('input-wrapper')).toMatchSnapshot();
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 });
 
 test('updates city value as a user types', async () => {
@@ -40,10 +41,17 @@ test('updates city value as a user types', async () => {
 
   render(<MockParentComponent />);
   const cityInput = screen.getByLabelText('Test label');
-
   expect(cityInput).toHaveValue('');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
+
+  await user.type(cityInput, 'B');
+  expect(cityInput).toHaveValue('B');
+  expect(screen.queryByTestId('warning')).toBeInTheDocument();
+
+  await user.clear(cityInput);
   await user.type(cityInput, 'Baku');
   expect(cityInput).toHaveValue('Baku');
+
   await user.clear(cityInput);
   await user.type(cityInput, 'Los Angeles');
   expect(cityInput).toHaveValue('Los Angeles');
