@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { InputWrapper } from 'src/components/layout';
 import { Label } from 'src/components/forms';
 import { PersonalInfoContext } from 'src/hooks/Contexts';
+import { isValidMobile } from 'src/utils';
 import styles from './MobileNumber.module.css';
 
 function MobileNumber() {
@@ -10,7 +11,7 @@ function MobileNumber() {
   const { mobile } = personalInfo;
 
   const handleChange = e =>
-    setPersonalInfo({ ...personalInfo, mobile: e.target.value });
+    setPersonalInfo({ ...personalInfo, mobile: e.target.value.trim() });
 
   return (
     <InputWrapper>
@@ -20,11 +21,14 @@ function MobileNumber() {
         id="mobile"
         name="mobile"
         onChange={handleChange}
-        // pattern={}
+        pattern="^\+[0-9]{11,}"
         placeholder="+12345678910"
         type="tel"
         value={mobile}
       />
+      {isValidMobile(mobile) || (
+        <div data-testid="warning" className={styles.invalid}></div>
+      )}
     </InputWrapper>
   );
 }

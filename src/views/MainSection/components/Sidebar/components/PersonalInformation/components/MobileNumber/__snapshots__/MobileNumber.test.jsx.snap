@@ -13,6 +13,7 @@ exports[`renders MobileNumber 1`] = `
     class="_telInput_1536b4"
     id="mobile"
     name="mobile"
+    pattern="^\\+[0-9]{11,}"
     placeholder="+12345678910"
     type="tel"
     value=""

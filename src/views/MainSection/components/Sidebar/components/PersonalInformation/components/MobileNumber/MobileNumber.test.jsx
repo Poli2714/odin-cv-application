@@ -30,6 +30,7 @@ test('renders MobileNumber', () => {
   render(<MobileNumber />);
 
   expect(screen.getByTestId('input-wrapper')).toMatchSnapshot();
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 });
 
 test('updates mobile value as a user types', async () => {
@@ -39,10 +40,14 @@ test('updates mobile value as a user types', async () => {
   const mobileInput = screen.getByLabelText('Test label');
 
   expect(mobileInput).toHaveValue('');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
+
   await user.type(mobileInput, '123');
   expect(mobileInput).toHaveValue('123');
+  expect(screen.queryByTestId('warning')).toBeInTheDocument();
+
   await user.clear(mobileInput);
-  expect(mobileInput).toHaveValue('');
-  await user.type(mobileInput, '+1234567890');
-  expect(mobileInput).toHaveValue('+1234567890');
+  await user.type(mobileInput, '+12345678901');
+  expect(mobileInput).toHaveValue('+12345678901');
+  expect(screen.queryByTestId('warning')).not.toBeInTheDocument();
 });
